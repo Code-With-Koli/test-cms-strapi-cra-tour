@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_crafting_routes",
+  "info": {
+    "displayName": "routes"
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    }
+  }
+}

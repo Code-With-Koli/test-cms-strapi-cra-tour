@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_service_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "includes": {
+      "displayName": "section",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.section"
+    },
+    "excludes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.section"
+    }
+  }
+}

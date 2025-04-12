@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "cratour_als",
+  "info": {
+    "singularName": "cratour-al",
+    "pluralName": "cratour-als",
+    "displayName": "Cratour.al"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Slogan": {
+      "type": "string",
+      "required": true
+    },
+    "Desc": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "service": {
+      "displayName": "services",
+      "type": "component",
+      "repeatable": true,
+      "component": "service.services"
+    }
+  }
+}

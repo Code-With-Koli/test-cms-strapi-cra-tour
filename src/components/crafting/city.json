@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_crafting_cities",
+  "info": {
+    "displayName": "city",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cityName": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "requests": {
+      "type": "text"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

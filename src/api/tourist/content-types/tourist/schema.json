@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tourists",
+  "info": {
+    "singularName": "tourist",
+    "pluralName": "tourists",
+    "displayName": "tourist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "isLeader": {
+      "type": "boolean",
+      "default": false
+    },
+    "email": {
+      "type": "email"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "review": {
+      "type": "text"
+    },
+    "group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group.group",
+      "inversedBy": "tourists"
+    }
+  }
+}

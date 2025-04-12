@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_highlights",
+  "info": {
+    "displayName": "highlight",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "isNew": {
+      "type": "boolean"
+    }
+  }
+}

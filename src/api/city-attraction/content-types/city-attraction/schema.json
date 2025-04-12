@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city_attractions",
+  "info": {
+    "singularName": "city-attraction",
+    "pluralName": "city-attractions",
+    "displayName": "Attraction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "tour_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tour-activity.tour-activity",
+      "mappedBy": "attraction"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isSuggested": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "tour_package": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tour-package.tour-package",
+      "inversedBy": "attractions"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "socialSharedLinks": {
+      "displayName": "socials",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.socials"
+    },
+    "lat": {
+      "type": "float",
+      "required": true
+    },
+    "lng": {
+      "type": "float",
+      "required": true
+    }
+  }
+}

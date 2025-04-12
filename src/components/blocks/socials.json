@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_socials",
+  "info": {
+    "displayName": "socials"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "facebook",
+        "tik-tok",
+        "youtube",
+        "linkedin",
+        "twitter",
+        "web"
+      ],
+      "required": true,
+      "default": "web"
+    }
+  }
+}

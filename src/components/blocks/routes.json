@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_blocks_routes",
+  "info": {
+    "displayName": "routes",
+    "icon": "car",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "notes": {
+      "type": "text",
+      "private": true
+    },
+    "days": {
+      "type": "integer",
+      "min": 0,
+      "default": 0
+    },
+    "routeItem": {
+      "displayName": "routeItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.route-item"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cra-tour.cra-tour"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Day 1",
+      "required": true
+    }
+  }
+}

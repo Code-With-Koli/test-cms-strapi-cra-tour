@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tourists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tourist.tourist",
+      "mappedBy": "group"
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "days": {
+      "type": "integer"
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "feedback": {
+      "type": "text"
+    },
+    "country": {
+      "type": "string"
+    },
+    "experiences": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.experience"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "place",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "default": 1,
+      "min": 0,
+      "max": 10
+    },
+    "rates": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "isSuggested": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "notes": {
+      "type": "text",
+      "private": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "activity_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity-type.activity-type"
+    }
+  }
+}

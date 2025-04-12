@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_pins",
+  "info": {
+    "displayName": "pin",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lat": {
+      "type": "decimal",
+      "required": true
+    },
+    "lng": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

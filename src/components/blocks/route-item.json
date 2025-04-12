@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_route_items",
+  "info": {
+    "displayName": "routeItem",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "stayingTime": {
+      "type": "string"
+    },
+    "tour_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tour-activity.tour-activity"
+    }
+  }
+}

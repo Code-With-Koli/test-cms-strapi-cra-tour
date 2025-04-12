@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_shared_places",
+  "info": {
+    "displayName": "place",
+    "icon": "pinMap",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "displayTitle": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "isExternalLink": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "required": true,
+      "default": 5,
+      "max": 10,
+      "min": 1
+    },
+    "rates": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "isSuggested": {
+      "type": "boolean",
+      "default": false
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "restaurants",
+        "sightseeing",
+        "shops-boutiques",
+        "where-to-stay",
+        "cultural-experiences",
+        "outdoor-adventures",
+        "nightlife",
+        "festivals-events",
+        "local-markets",
+        "hidden-gems"
+      ]
+    }
+  }
+}

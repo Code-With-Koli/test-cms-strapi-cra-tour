@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tour_activities",
+  "info": {
+    "singularName": "tour-activity",
+    "pluralName": "tour-activities",
+    "displayName": "TourActivity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "attraction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city-attraction.city-attraction",
+      "inversedBy": "tour_activities"
+    },
+    "activity_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity-type.activity-type"
+    }
+  }
+}

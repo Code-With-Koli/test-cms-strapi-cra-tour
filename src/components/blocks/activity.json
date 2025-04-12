@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_blocks_activities",
+  "info": {
+    "displayName": "activity",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "restaurants",
+        "sightseeing",
+        "shops-boutiques",
+        "where-to-stay",
+        "cultural-experiences",
+        "outdoor-adventures",
+        "nightlife",
+        "festivals-events",
+        "local-markets",
+        "hidden-gems"
+      ],
+      "required": true,
+      "default": "restaurants"
+    },
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "desc": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

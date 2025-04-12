@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_experiences",
+  "info": {
+    "displayName": "experience",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "experience": {
+      "type": "text"
+    },
+    "tour_activity": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tour-activity.tour-activity"
+    },
+    "mood": {
+      "type": "enumeration",
+      "enum": [
+        "very-bad",
+        "bad",
+        "neutral",
+        "nice",
+        "very-nice"
+      ]
+    }
+  }
+}

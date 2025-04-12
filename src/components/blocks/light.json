@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_lights",
+  "info": {
+    "displayName": "light",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "light": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

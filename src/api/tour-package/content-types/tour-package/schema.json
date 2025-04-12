@@ -1,0 +1,133 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tour_packages",
+  "info": {
+    "singularName": "tour-package",
+    "pluralName": "tour-packages",
+    "displayName": "TourPackage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60,
+      "minLength": 3
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "routes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.routes"
+    },
+    "totalDays": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 0
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "customerPhotos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "highlights": {
+      "displayName": "highlight",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.highlight"
+    },
+    "groupSize": {
+      "type": "string",
+      "required": true,
+      "default": "1-50"
+    },
+    "age": {
+      "type": "string",
+      "required": true,
+      "default": "Age range 4 to 99"
+    },
+    "attractions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::city-attraction.city-attraction",
+      "mappedBy": "tour_package"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "socialSharedLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.socials"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "from-us",
+        "from-you"
+      ],
+      "default": "from-us",
+      "required": true
+    },
+    "itenerary": {
+      "displayName": "itenerarr-item",
+      "type": "component",
+      "repeatable": true,
+      "component": "crafting.itenerarr-item"
+    }
+  }
+}

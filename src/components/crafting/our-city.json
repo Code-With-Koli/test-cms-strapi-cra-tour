@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_crafting_our_cities",
+  "info": {
+    "displayName": "our-city"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "requests": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cra-tour.cra-tour"
+    }
+  }
+}
