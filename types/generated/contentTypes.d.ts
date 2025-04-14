@@ -404,8 +404,7 @@ export interface ApiActivityTypeActivityType
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
-    description: '';
-    displayName: 'category';
+    displayName: 'Category';
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -425,12 +424,8 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    tour_packages: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::tour-package.tour-package'
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

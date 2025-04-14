@@ -36,11 +36,6 @@
       "default": 1,
       "min": 0
     },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
-    },
     "isFeatured": {
       "type": "boolean",
       "default": false,
@@ -128,6 +123,11 @@
       "type": "component",
       "repeatable": true,
       "component": "crafting.itenerarr-item"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }

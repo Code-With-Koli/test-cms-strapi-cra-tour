@@ -4,8 +4,7 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category",
-    "description": ""
+    "displayName": "Category"
   },
   "options": {
     "draftAndPublish": true
@@ -21,21 +20,15 @@
     },
     "slug": {
       "type": "uid",
-      "required": true,
       "targetField": "title"
     },
     "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
-    },
-    "tour_packages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tour-package.tour-package"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
