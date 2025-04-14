@@ -969,7 +969,6 @@ export interface ApiTourPackageTourPackage extends Struct.CollectionTypeSchema {
       > &
       Schema.Attribute.DefaultTo<1>;
     type: Schema.Attribute.Enumeration<['from-us', 'from-you']> &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'from-us'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

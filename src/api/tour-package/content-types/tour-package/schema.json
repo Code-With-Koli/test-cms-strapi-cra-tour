@@ -121,7 +121,7 @@
         "from-you"
       ],
       "default": "from-us",
-      "required": true
+      "required": false
     },
     "itenerary": {
       "displayName": "itenerarr-item",
